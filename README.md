@@ -1,25 +1,27 @@
 # CRT.sh Domain Name Grabber
 
-This Python script grabs domain names (like `*.example.com`) from [crt.sh](https://crt.sh) for any domain you type in. It saves them to a text file and handles problems like bad internet or slow servers.
+This Python script grabs domain names (like `*.example.com`) from **[crt.sh](https://crt.sh)** for any domain you enter. It saves them to a text file and handles issues like bad internet or slow servers.
 
 ## Features
 - Pulls domain names from **crt.sh** SSL certificates.
-- Tries **5 times** if the server fails.
+- Retries **5 times** if the server fails or times out.
 - Saves results to `name_values_<yourdomain>.txt`.
-- Shows errors and how long it takes.
+- Shows errors and how long it takes in **seconds**.
 
 ## Requirements
-- Python **3.6** or newer.
+- **Python 3.6** or newer.
 - Install these packages:
   ```bash
   pip install requests ijson urllib3
 Installation
 
-Clone the repo:
+Clone the repository:
 bashgit clone https://github.com/yourusername/crtsh-domain-grabber.git
-cd crtsh-domain-grabber
 
-Install packages:
+Navigate to the project folder:
+bashcd crtsh-domain-grabber
+
+Install required packages:
 bashpip install requests ijson urllib3
 
 
@@ -28,8 +30,8 @@ Usage
 Run the script:
 bashpython script.py
 
-Type a domain (like example.com).
-Check name_values_<yourdomain>.txt for results.
+Enter a domain (e.g., example.com) when prompted.
+Check the output file name_values_<yourdomain>.txt for results.
 
 Example
 bash$ python script.py
@@ -43,18 +45,18 @@ Saved to name_values_example.com.txt
 Time taken: 1.2 seconds
 Troubleshooting
 
-Package warnings? Update them:
+See package warnings? Update them:
 bashpip install --upgrade requests urllib3
 
 No results? Check your internet or if crt.sh is down.
-Retries wait 10 seconds if something fails.
+The script waits 10 seconds between retries if something fails.
 
 Limitations
 
-Needs crt.sh to be online.
-Big domain lists might take a bit.
+Requires crt.sh to be online.
+Large domain lists may take a few seconds to process.
 
 Contributing
-Got ideas? Fork the repo, make changes, and send a pull request!
+Want to help? Fork the repo, make changes, and submit a pull request!
 License
 Licensed under the MIT License.
