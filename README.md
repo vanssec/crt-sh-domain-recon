@@ -38,7 +38,7 @@ pip install --upgrade requests urllib3 chardet
 2. Run the script and provide a domain when prompted:
 
 ```bash
-python crtsh_fetcher.py
+python main.py
 ```
 
 3. Enter a domain (e.g., `example.com`) when prompted.
@@ -51,7 +51,7 @@ python crtsh_fetcher.py
 ### 📋 **Example**
 
 ```bash
-$ python crtsh_fetcher.py
+$ python main.py
 Enter the domain (e.g., example.com): example.com
 Fetching name_value entries for example.com from crt.sh...
 Attempt 1/5 for example.com
